@@ -1,18 +1,13 @@
-import React from "react";
-
-let index = 0;
-
-function increase() {
-  console.log(index);
-  index += 1;
-}
+import React, { useState } from "react";
 
 function Button() {
+  const [counter, setCounter] = useState(1);
   return (
     <>
-      <button className="btn btn-info" onClick={increase}>
-        Press this button{" "}
+      <button className="btn btn-info" onClick={() => setCounter(counter + 1)}>
+        Counter +
       </button>
+      <h1>{counter}</h1>
     </>
   );
 }
