@@ -7,11 +7,13 @@ function Products() {
       {/* <table style={{ color: "red", backgroundColor: "blue" }} border="1"> */}
 
       <table className="mytable" border="1">
-        {products.map((product) => (
-          <tr>
-            <td>{product}</td>
-          </tr>
-        ))}
+        <tbody>
+          {products.map((product, index) => (
+            <tr key={index}>
+              <td>{product}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </>
   );

@@ -1,7 +1,6 @@
 import React from "react";
 
 let index = 0;
-const products = ["Toy", "Cart", ""];
 
 function increase() {
   console.log(index);
