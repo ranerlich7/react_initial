@@ -1,25 +1,24 @@
+import { useState } from "react";
 import "../App.css";
 import Product from "./Product";
-const products = [
-  { name: "Cart", price: 9.9 },
-  { name: "Tent", price: 19.9 },
-  { name: "Battery", price: 10.9 },
-];
 
 function Products() {
+  const [products, setProducts] = useState([]);
+  const [pName, setpName] = useState("");
   return (
     <>
-      <table className="table" border="1">
-        <tbody>
-          {products.map((product, index) => (
-            <tr key={index}>
-              <td>
-                <Product product={product} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      Product Name:
+      <input className="form-control" value={pName} onChange={(e) => setpName(e.target.value)} />
+      <button onClick={() => setProducts([...products, { name: pName, price: 1.99 }])} className="btn btn-success">
+        Add product
+      </button>
+      <hr />
+      <h3>Products:</h3>
+      {products.map((product, index) => (
+        <div className="alert alert-primary" key={index}>
+          <Product product={product} />
+        </div>
+      ))}
     </>
   );
 }
