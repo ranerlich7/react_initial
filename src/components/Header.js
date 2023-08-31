@@ -4,7 +4,7 @@ import Button from "./Button";
 function Header({ text, subtext }) {
   return (
     <>
-      <h1>{text}</h1>
+      <h1 className="text-bg-success">{text}</h1>
       <h2>{subtext}</h2>
       <Button />
       <hr />

@@ -10,7 +10,9 @@ function increase() {
 function Button() {
   return (
     <>
-      <button onClick={increase}>Press this button </button>
+      <button className="btn btn-info" onClick={increase}>
+        Press this button{" "}
+      </button>
     </>
   );
 }
