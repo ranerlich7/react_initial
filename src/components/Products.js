@@ -1,17 +1,29 @@
 import "../App.css";
-const products = ["Cart", "Tent", "Battery"];
+import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css";
+import Product from "./Product";
+
+const products = [
+  {
+    name: "Cart",
+    price: 30,
+  },
+  {
+    name: "Tent",
+    price: 300,
+  },
+  {
+    name: "Battery",
+    price: 3,
+  },
+];
 
 function Products() {
   return (
     <>
-      {/* <table style={{ color: "red", backgroundColor: "blue" }} border="1"> */}
-
       <table className="mytable" border="1">
         <tbody>
           {products.map((product, index) => (
-            <tr key={index}>
-              <td>{product}</td>
-            </tr>
+            <Product key={index} product={product} />
           ))}
         </tbody>
       </table>
