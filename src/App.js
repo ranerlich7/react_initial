@@ -5,7 +5,7 @@ import Products from "./components/Products";
 function App() {
   return (
     <>
-      <Header text={3} subtext="HIIIIIIIIIIII" />
+      <Header text="HI" subtext={3} />
       <div>Hello World</div>
       <h1>Hi</h1>;
       <Products />
