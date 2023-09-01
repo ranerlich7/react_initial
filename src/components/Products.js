@@ -1,5 +1,4 @@
 import "../App.css";
-import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css";
 import Product from "./Product";
 
 const products = [
@@ -20,7 +19,7 @@ const products = [
 function Products() {
   return (
     <>
-      <table className="mytable" border="1">
+      <table className="table" border="1">
         <tbody>
           {products.map((product, index) => (
             <Product key={index} product={product} />
