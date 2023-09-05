@@ -1,22 +1,24 @@
+import { useState } from "react";
 import "../App.css";
 import Product from "./Product";
 
-const products = [
-  {
-    name: "Cart",
-    price: 30,
-  },
-  {
-    name: "Tent",
-    price: 300,
-  },
-  {
-    name: "Battery",
-    price: 3,
-  },
-];
 
 function Products() {
+    const [products, setProducts] = useState([
+        {
+          name: "Cart",
+          price: 30,
+        },
+        {
+          name: "Tent",
+          price: 300,
+        },
+        {
+          name: "Battery",
+          price: 3,
+        },
+      ]);
+      
   return (
     <>
       <table className="table" border="1">

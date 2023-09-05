@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Calculator() {
   // this is the way to define state in react
   // explanation -> const ["statename", "setStatename _function"] = useState("defaultvalue")
-  const [counter, setCounter] = useState(0);
+  const [result, setResult] = useState(0);
   const [num1, setNum1] = useState("0");
   const [num2, setNum2] = useState("0");
   return (
@@ -17,15 +17,18 @@ function Calculator() {
       <br />
       Num2: <input value={num2} onChange={(e) => setNum2(e.target.value)} />
       {/* Plus action */}
-      <button className="btn btn-info" onClick={() => setCounter(parseFloat(num1) + parseFloat(num2))}>
+      <button className="btn btn-info" onClick={() => setResult(parseFloat(num1) + parseFloat(num2))}>
         Press +
+      </button>
+      <button className="btn btn-info" onClick={() => setResult(parseFloat(num1) * parseFloat(num2))}>
+        Press *
       </button>
       &nbsp;
       {/* minus action */}
-      <button className="btn btn-info" onClick={() => setCounter(parseFloat(num1) - parseFloat(num2))}>
+      <button className="btn btn-info" onClick={() => setResult(parseFloat(num1) - parseFloat(num2))}>
         Press -
       </button>
-      <div>{counter}</div>
+      <div>{result}</div>
     </>
   );
 }
