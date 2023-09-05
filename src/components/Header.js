@@ -1,12 +1,10 @@
 import PropTypes from "prop-types";
-import Button from "./Button";
 
 function Header({ text, subtext }) {
   return (
     <>
       <h1 className="alert alert-primary">{text}</h1>
-      <h2>{subtext}</h2>
-      <Button />
+      Version {subtext}
       <hr />
     </>
   );
